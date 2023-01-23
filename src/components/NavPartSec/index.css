@@ -1,0 +1,28 @@
+.maincha{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    z-index: 10000;
+}
+
+.maincha>li{
+    list-style: none;
+    text-decoration: none;
+}
+li{
+    cursor: pointer;
+}
+.maincha>li:nth-child(1){
+    border-bottom: 1px solid rgb(255, 81, 0);
+}
+#par{
+    border-bottom: 1px solid rgb(187, 187, 187);
+    
+}
+@media(max-width:864px){
+    .maincha{
+        width: 80%;    
+    }
+}

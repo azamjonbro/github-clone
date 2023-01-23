@@ -1,0 +1,143 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.birinchi{
+    width: 28%;
+    height: 100vh;
+}
+
+
+.ikkinchi{
+    width: 72%;
+    height: 100vh;
+}
+.foravatar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar{
+    width: 300px;
+    height: 300px;
+    margin-top: -40px;
+    border-radius: 50%;
+}
+.aboutcoder{
+    width: 100%;
+    height: 54vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#des{
+    width: 70%
+}
+
+.edit-p{
+    width: 95%;
+    height: 34  px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 4px;
+}
+.lchalar{
+    list-style: none;
+}
+.title-line{
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.manba{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 96%;
+    flex-wrap: wrap;
+}
+
+#card{
+    width: 435px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    flex-direction: column;
+    height: 150px;  
+}
+#pub{
+    width: 50px;
+    height: 20px;
+    border: 1px solid rgb(192, 192, 192);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: none;
+}
+#fir{
+    width: 92%;
+}
+.fordes{
+    width: 100%;
+}
+.forlan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.forlan>p{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+.dum{
+    width: 13px;
+    height: 13px;
+    background: yellow;
+    border-radius: 50%;
+}
+.nal{
+    width: 13px;
+    height: 13px;
+    background: purple;
+    border-radius: 50%;
+}
+.pinnedCard-btnGroup{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnss{
+    width: 5%;
+}
+
+@media(max-width:1270px){
+        .manba{
+            width: 100%;
+            background: #000;
+        }
+        #card{
+            width: 150px;
+            height: 100px;
+        }
+}
