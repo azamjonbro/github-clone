@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 const index = ()=>{
     const [info, setInfo]= useState([])
@@ -6,7 +7,7 @@ const index = ()=>{
     let salomcha;
     useEffect  (()=>{
           const res = async()=>{
-                const data =  await axios.get('https://api.github.com/users/ShohsultonCode')           
+                const data =  await axios.get('https://api.github.com/users/azamjonabdullayev')           
                 const arr = [data.data]
                 setInfo(arr)
           }
@@ -37,13 +38,14 @@ const index = ()=>{
                                     <div className="btns mx-5">
                                      <button className='edit-p'>Edit Profile</button>
                                     </div>
-                                    <p className='mx-5'>{item.followers} followers : {item.following}following</p>
+                                    <Link className='mx-5' to='/follow'>{item.followers}  followers <br /> {item.following}  following</Link>
 
                                     <ul className='mx-3'>
                                           <li className='lchalar'>{item.company}</li>
                                           <li className='lchalar'>{item.location}</li>
-                                          <li className='lchalar'>22:09 (UTC-12:00)</li>
-                                          <li className='lchalar'><a href="https://shohsultondev.netlify.app/">{item.blog}</a></li>
+                                          <li className='lchalar'>{item.created_at}</li>
+
+                                          <li className='lchalar'><a href="https://t.me/azamjon_bro">{item.blog}</a></li>
                                     </ul>
                                    </div>
                               </div>

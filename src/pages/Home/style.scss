@@ -1,21 +1,16 @@
 .wrapper{
-    width: 100%;
-    height: 100vh;
+    width: 70%;
     display: flex;
     justify-content: center;
-    align-items: center;   
 }
 
 
-.birinchi{
-    width: 28%;
-    height: 100vh;
-}
+
 
 
 .ikkinchi{
-    width: 72%;
-    height: 100vh;
+    width: 100%;
+   
 }
 .foravatar{
     width: 100%;
@@ -78,7 +73,7 @@
     align-items: center;    
     justify-content: space-between;
     flex-direction: column;
-    height: 150px;  
+    height: 100px;  
 }
 #pub{
     width: 50px;
@@ -132,12 +127,74 @@
 }
 
 @media(max-width:1270px){
-        .manba{
-            width: 100%;
-            background: #000;
-        }
-        #card{
-            width: 150px;
-            height: 100px;
-        }
+    .birinchi{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .manba{
+        width: 100%;
+        
+    }
+    #card{
+        width: 150px;
+        height: 100px;
+    }
+    .wrapper{
+        display: block;
+    }
+    .mt-2{
+        margin-top: 50px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .avatar{
+        width: 200px;
+        height: 200px;
+    }
+    .foravatar{
+        justify-content: flex-start;
+
+        width: auto;
+    }
+
+    .ikkinchi{
+        width: 100%;
+    }
+    .ikkinchi .manba {
+        display: block;
+    }
+     .card{
+        width: 90% !important;
+        height: auto !important;
+        margin: 0 auto;
+    }
+    .pinnedCard-btnGroup{
+        gap: 30px;
+    }
+    .aboutcoder{
+        text-align: center;
+    }
+    #des{
+        width: auto;
+    }
+    #fir{
+        align-items: flex-start !important;
+        margin: 20px !important;
+    }
+}
+@media (max-width:800px) {
+.wrapper{
+    width: 90%;
+}   
+
+}
+@media (max-width:560px){
+.nav-link{
+    font-size: 14px;
+}
+
 }

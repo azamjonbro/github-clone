@@ -93,7 +93,7 @@ const index = () => {
                   aria-expanded="false"
                >
                   <img
-                     src="https://avatars.githubusercontent.com/u/108561261?v=4"
+                     src="https://avatars.githubusercontent.com/u/110798985?v=4"
                      className="rounded-circle"
                      id='profile'
                   />
