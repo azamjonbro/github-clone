@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 100px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid lightgray;
 }
 
 .HTML {
@@ -52,7 +52,7 @@
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 32px;
   text-decoration: none;
 }
 
@@ -62,26 +62,35 @@
   background: none;
   border: 1px solid;
   width: 80px;
+  height: 25px;
   border-radius: 40px;
+  color: lightgrey;
 }
 
 .left {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.card-language {
+  color: lightgray;
 }
 
 .btn-star {
   background: none;
+  outline: none;
   border: none;
+  color: lightgrey;
 }
 
 .right {
   width: 150px;
   height: 30px;
-  border: 1px solid;
+  border: 1px solid lightgray;
   display: flex;
+  background: rgb(81, 81, 81);
   cursor: pointer;
   align-items: center;
   justify-content: space-around;
@@ -94,10 +103,17 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  color: lightgray;
 }
 
 .form-control {
   width: 60% !important;
+}
+
+.repo-input {
+  background: gray;
+  color: black;
+  outline: none;
 }
 
 .inputbar {
@@ -161,6 +177,10 @@
   .right {
     width: 90px;
   }
+  .card-title {
+    font-size: 20px;
+    text-decoration: none;
+  }
 }
 @media (max-width: 420px) {
   .right {
@@ -175,5 +195,9 @@
     width: 50px;
     height: 30px;
     font-size: 13px;
+  }
+  .card-title {
+    font-size: 16px;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=style.css.map */

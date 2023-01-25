@@ -23,7 +23,7 @@ function Index() {
         <input 
                   type="text"
                   placeholder='Find a repasitory...'
-                  className='form-control w-50'
+                  className='form-control w-50 repo-input'
                   />
                   <div className="btnbar">
                   <button className="btn-type">type <i class="fa-solid fa-sort-down"></i></button>

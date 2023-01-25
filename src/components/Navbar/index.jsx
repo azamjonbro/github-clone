@@ -47,19 +47,19 @@ const index = () => {
                <ul className='d-flex justify-content-center align-items-center mt-3  gap-3' id='nextitems'>
 
                   <li className="nav-item" id='nav-item'>
-                     <a className="navchalar" href="#">Pull requests</a>
+                     <a className="navchalar" href="https://github.com/pulls">Pull requests</a>
                   </li>
                   <li className="nav-item" id='nav-item'>
-                     <a className="navchalar" href="#">Issues</a>
+                     <a className="navchalar" href="https://github.com/issues">Issues</a>
                   </li>
                   <li className="nav-item" id='nav-item'>
-                     <a className="navchalar" href="#">Codespaces</a>
+                     <a className="navchalar" href="https://github.com/codespaces">Codespaces</a>
                   </li>
                   <li className="nav-item" id='nav-item'>
-                     <a className="navchalar" href="#">Marketplace</a>
+                     <a className="navchalar" href="https://github.com/marketplace">Marketplace</a>
                   </li>
                   <li className="nav-item" id='nav-item'>
-                     <a className="navchalar" href="#">Explore</a>
+                     <a className="navchalar" href="https://github.com/explore">Explore</a>
                   </li>
                </ul>
             </div>
