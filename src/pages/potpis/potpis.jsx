@@ -15,7 +15,7 @@ const index = ()=>{
     }, [])
 
     return(
-        <div className="wrapper">       
+        <div className="wrap">       
         <div className="follow w-75">
             {
                 users.length>0 ? users.map((item, index)=>{
@@ -23,7 +23,7 @@ const index = ()=>{
                     return(
                         <div className="carts d-flex justify-content-between w-100  " key={item.id}>
                         <div className="forimg">
-                            <img src={item.avatar_url} alt="Avatar"/>
+                            <img src={item.avatar_url} className='user-logo' alt="Avatar"/>
                         </div>
 
                         <div className="infolar d-flex justify-content-between align-items-center w-100 mx-2">
