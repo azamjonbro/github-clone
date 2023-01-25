@@ -1,35 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import ProfileUser from '../../components/Profile'
 import "./style.scss";
-import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 const index = () => {
       const [total, setTotal] = useState(4);
       const [totalIndex, setTotalIndex] = useState(1);
       const firstOperator = total * totalIndex;
       const lastOperator = firstOperator - total;
-      const [users, setUsers] = useState([]);
-      const pushArray = [];
-      const [load, setLoading] = useState(true)
-      const res = async () => {
-            const res = await axios.get('https://api.github.com/users/azamjonabdullayev/repos')
-            setUsers(res.data)
-            if (res.data) {
-                  setLoading(false)
-            }
-      }
+      const [repolis, setRepolis] = useState([]);
+      const pochin = [];
+
+            
       useEffect(() => {
-            res()
+            fetch('https://api.github.com/users/azamjonabdullayev/repos').then((data)=>data.json()).then((res)=>{
+                 setRepolis(res) 
+            })
       }, [])
       
-      if (load) {
-            return(
-               <h2 className='load'>Loaing...</h2>
-            )
-         }
-      const sliceApi = users.slice(lastOperator, firstOperator);
-      for (let i = 1; i <= Math.floor(users.length / total); i++) {
-            pushArray.push(i)
+      const pochination = repolis.slice(lastOperator, firstOperator);
+      for (let i = 1; i <= Math.floor(repolis.length / total); i++) {
+            pochin.push(i)
       }
 
       const ClickedBtn = (number) => {
@@ -38,42 +28,51 @@ const index = () => {
       
 
       return (
-            <div className="wrapper">
+            <div className="home-box">
                   
 
-                  <div className="ikkinchi mt-5">
+                  <div className="wrapper mt-5">
                         <div className='title-line mx-2'>
-                              <h5 className='mx-2'>Popular repositories</h5>
-                              <p>Customize your pins</p>
+                              <h5 className='mx-2 title-line-text'>Popular repositories</h5>
+                              <p className='title-line-text'>Customize your pins</p>
                         </div>
-                        <div className="manba">
+                        <div className="repostory">
                               {
-                                    users.length > 0 ? sliceApi.map((item, index) => {
-                                          console.log(item.language)
+                                    repolis.length > 0 ? pochination.map((e) => {
                                           return (
-                                                <div key={index} className="card" id='card'>
-                                                      <div id='fir' className="first d-flex justify-content-between align-items-center mt-2"><a style={{ textDecoration: "none" }} href={item.html_url}>{item.name}</a> <button id='pub'>Public</button></div>
-                                                      <div className="fordes w-100">
-                                                            <p className='mx-3'>{item.description}</p>
+                                                <div key={e.id} className="cart" >
+                                                     <div className="home-card-left">
+                                                     <div className="thml_url">
+                                                            <h2 className="html-title">
+                                                                  <a href={e.html_url}> {e.name}</a>
+                                                            </h2>
                                                       </div>
-                                                      <div className="forlan mx-5">
-                                                            <div className={item.language}></div>
+                                                      <div className="desc w-100">
+                                                            <p className='mx-3'>{e.description}</p>
+                                                      </div>
+                                                      <div className="language">
+                                                            <div className={e.language} id='lang'></div>
                                                             {
-                                                                  item.language
+                                                                  e.language
                                                             }
                                                       
+                                                      </div>
+                                                      
+                                                     </div>
+                                                     <div className="home-cart-right">
+                                                            <button className="private">{e.private==false? <p className='home-cart-text'>public</p>:<p className='home-cart-text'>private</p>}</button>
                                                       </div>
                                                 </div>
                                           )
                                     }) : "Not Found"
                               }
                         </div>
-                        <div className="pinnedCard-btnGroup mt-5">
-                              {pushArray.length && pushArray.map((item, index) => (
+                        <div className="pochin-btn mt-5">
+                              {pochin.length && pochin.map((item, index) => (
                                    <div className="btnss">
                                      <button
                                           key={index}
-                                          className="pinnedCard-btnGroup__btn btn btn-primary"
+                                          className="pochin-btn btn btn-primary"
                                           type="button"
                                           onClick={() => ClickedBtn(item)}
                                     >

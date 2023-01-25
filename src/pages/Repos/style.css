@@ -1,4 +1,179 @@
 .repol {
-  background-color: aquamarine;
+  width: 70%;
+}
+
+.contain {
+  margin-top: 50px;
   width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px;
+  border-bottom: 1px solid;
+}
+
+.HTML {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+
+.CSS {
+  width: 10px;
+  height: 10px;
+  background: rgb(95, 27, 159);
+  border-radius: 50%;
+}
+
+.JavaScript {
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  border-radius: 50%;
+}
+
+.SCSS {
+  width: 10px;
+  height: 10px;
+  background: rgb(218, 75, 191);
+  border-radius: 50%;
+}
+
+.card-language {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.html_url {
+  display: flex;
+  gap: 40px;
+}
+
+.card-title {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.public {
+  border: none;
+  outline: none;
+  background: none;
+  border: 1px solid;
+  width: 80px;
+  border-radius: 40px;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.btn-star {
+  background: none;
+  border: none;
+}
+
+.right {
+  width: 150px;
+  height: 30px;
+  border: 1px solid;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.fa-star {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 60% !important;
+}
+
+.inputbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.btnbar {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-type {
+  padding: 5px 10px;
+  border: none;
+  background: rgb(232, 232, 232);
+  border-radius: 10px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.new {
+  color: white;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .repol {
+    width: 100%;
+  }
+  .repol .contain {
+    width: 90%;
+  }
+  .repol .inputbar {
+    gap: 20px;
+    height: 200px;
+    flex-direction: column;
+  }
+  .repol .al {
+    display: none;
+  }
+  .repol .new {
+    display: block;
+  }
+  .repol .form-control {
+    width: 80% !important;
+  }
+  .repol .btnbar {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .html_url {
+    gap: 10px;
+  }
+  .right {
+    width: 90px;
+  }
+}
+@media (max-width: 420px) {
+  .right {
+    width: 70px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .html_url {
+    flex-direction: column;
+  }
+  .public {
+    width: 50px;
+    height: 30px;
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=style.css.map */

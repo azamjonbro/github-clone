@@ -7,6 +7,11 @@ header {
   align-items: center;
 }
 
+.logotip {
+  background: white;
+  border-radius: 50%;
+}
+
 .part-first {
   width: 60%;
   height: 58px;
@@ -22,10 +27,15 @@ header {
   align-items: center;
 }
 
+.mt-3 {
+  width: 60%;
+}
+
 .brands > img {
-  width: 33px;
-  height: 33px;
-  border: none;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: -20px;
 }
 
 .brands {
@@ -39,10 +49,9 @@ header {
   width: 65%;
 }
 
-.logotip {
+.logo {
   background: white;
   border-radius: 50%;
-  margin-right: 30px;
 }
 
 #search {
@@ -118,24 +127,22 @@ header {
 }
 
 .res-con {
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 60vh;
   background: #24292f;
   position: absolute;
   top: 58px;
-  z-index: 10000;
+  z-index: 10000000000000000000;
   left: 0;
 }
 
 #profile {
   width: 25px;
   height: 25px;
-}
-
-#slash {
-  display: none;
 }
 
 @media (max-width: 1095px) {
@@ -152,13 +159,17 @@ header {
     align-items: center;
   }
   .part-first {
-    width: 60%;
+    width: 80%;
   }
   .dropdown {
     width: 10%;
+    margin-left: 50px;
   }
 }
 @media (max-width: 868px) {
+  .logotip {
+    margin-left: 95px;
+  }
   #slash {
     display: none;
   }

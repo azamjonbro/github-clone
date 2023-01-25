@@ -1,0 +1,56 @@
+.prof-imagebox{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profil{
+    width: 25%;
+    border-right: 1px solid gray;
+}
+.prof-image{
+    width: 250px;
+    height: 250px;
+    margin-top: -40px;
+    border-radius: 50%;
+}
+.about-me{
+    width: 100%;
+    height: 54vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prof-name{
+    color: lightgray;
+    font-size: 25px;
+}
+.information{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.bio-box{
+    width: 70%;
+    color: gray;
+    font-size: 18px;
+}
+.mt-2{
+    width: 100% !important;
+    margin: 0 auto;
+}
+.edit-p{
+    width: 95%;
+    height: 34px;
+    border: 1px solid lightgray;
+    background-color: gray;
+    border-radius: 14px;
+    color: lightgray;
+}
+.profil-list-item{
+    list-style: none;
+    color: lightgrey;
+}

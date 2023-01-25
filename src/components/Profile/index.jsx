@@ -1,60 +1,89 @@
-import React, { useEffect, useState } from "react";
+import "./index.scss";
+import { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
-const index = ()=>{
-    const [info, setInfo]= useState([])
 
-    let salomcha;
-    useEffect  (()=>{
-          const res = async()=>{
-                const data =  await axios.get('https://api.github.com/users/azamjonabdullayev')           
-                const arr = [data.data]
-                setInfo(arr)
-          }
-          res()
-    }, [])
-    return(
-        <>
-             {
-                        info.map((item, index)=>{
-                            return(
-                              <div className='mt-2 mx-2'>
-                              <div className="foravatar">
-                                    <img className='avatar' src={item.avatar_url} alt="Url" />
-                              </div>
-                              <div className="aboutcoder">
-                                   <div className="info">
-                                    
-                                   <div className="userm mx-5">
-                                       <h4>{item.name}</h4>
-                                       <h5>{item.login}</h5>
-                                   </div>
+function index() {
+  const [profil, setProfil] = useState([]);
+  useEffect(() => {
+    fetch("https://api.github.com/users/azamjonabdullayev")
+      .then((data) => data.json())
+      .then((result) => {
+        setProfil(result);
+      });
+  }, []);
+  return (
+    <>
+      <div className="profil">
+        {
+          <div className="mt-2 " key={profil.id}>
+            <div className="prof-imagebox">
+              <img className="prof-image" src={profil.avatar_url} alt="Url" />
+            </div>
+            <div className="about-me">
+              <div className="information">
+                <div className="userm mx-5">
+                  <h4 className="prof-name">{profil.name}</h4>
+                  <h5 className="prof-name username">{profil.login}</h5>
+                </div>
 
-                                   <div id='des' className="forbio mx-5">
-                                    <p>{item.bio}</p>
-                                   </div>
+                <div id="bio" className="bio-box mx-5">
+                  <p>{profil.bio}</p>
+                </div>
 
+                <div className="btns mx-5">
+                  <button className="edit-p">Edit Profile</button>
+                </div>
+                <Link className="mx-5" to="/follow">
+                  {profil.followers} followers
+                </Link>
+                <Link className="mx-5" to="/follow">
+                  {" "}
+                  {profil.following} following
+                </Link>
 
-                                    <div className="btns mx-5">
-                                     <button className='edit-p'>Edit Profile</button>
-                                    </div>
-                                    <Link className='mx-5' to='/follow'>{item.followers}  followers <br /> {item.following}  following</Link>
+                <ul className="mx-3 prof-list">
+                  <li className="prof-list-item">{profil.company}</li>
+                  <li className="prof-list-item">{profil.location}</li>
+                  <li className="prof-list-item">{profil.created_at}</li>
 
-                                    <ul className='mx-3'>
-                                          <li className='lchalar'>{item.company}</li>
-                                          <li className='lchalar'>{item.location}</li>
-                                          <li className='lchalar'>{item.created_at}</li>
-
-                                          <li className='lchalar'><a href="https://t.me/azamjon_bro">{item.blog}</a></li>
-                                    </ul>
-                                   </div>
-                              </div>
-                              </div>
-                              )
-                        })
-                  }
-        </>
-    )
+                  <li className="prof-list-item">
+                    <a href="https://t.me/azamjon_bro">{profil.blog}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </>
+  );
 }
 
-export default index
+export default index;
+
+// import React, { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
+// import './index.scss'
+// const Index = () => {
+//       const [account, setAccount] = useState([])
+//       useEffect(() => {
+//             fetch('https://api.github.com/users/azamjonabdullayev').then((db) => db.json()).then((res) => {
+//                   setAccount(res)
+//             })
+
+//       }, [])
+//       return (
+//             <>
+//                   {
+//                         account?.map((el) => {
+//                               return (
+//
+//                               )
+//                         })
+//                   }
+//             </>
+//       )
+// }
+
+// export default Index

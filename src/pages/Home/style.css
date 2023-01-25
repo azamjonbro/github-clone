@@ -1,58 +1,11 @@
+.home-box {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.ikkinchi {
-  width: 100%;
-  margin: 50px !important;
-}
-
-.foravatar {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar {
-  width: 300px;
-  height: 300px;
-  margin-top: -40px;
-  border-radius: 50%;
-}
-
-.aboutcoder {
-  width: 100%;
-  height: 54vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-#des {
-  width: 70%;
-}
-
-.edit-p {
-  width: 95%;
-  height: 34 px;
-  border: 1px solid rgb(173, 173, 173);
-  border-radius: 4px;
-}
-
-.lchalar {
-  list-style: none;
 }
 
 .title-line {
@@ -62,7 +15,7 @@
   align-items: center;
 }
 
-.manba {
+.repostory {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -70,65 +23,40 @@
   flex-wrap: wrap;
 }
 
-#card {
+.html-title {
+  color: #1f6feb !important;
+  font-size: 20px;
+}
+
+.html-title:hover {
+  border-bottom: 1px solid;
+}
+
+.title-line-text {
+  color: lightgray;
+}
+
+.cart {
   width: 435px;
-  margin-top: 10px;
+  padding: 20px 20px 15px 20px;
+  margin-top: 30px;
+  background-color: rgb(50, 50, 50);
   display: flex;
   align-items: center;
+  border-radius: 10px;
   justify-content: space-between;
-  flex-direction: column;
-  height: 150px;
 }
 
-#pub {
-  width: 50px;
-  height: 20px;
-  border: 1px solid rgb(192, 192, 192);
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  background: none;
-}
-
-#fir {
-  width: 92%;
-}
-
-.fordes {
-  width: 100%;
-}
-
-.forlan {
-  width: 100%;
+.language {
   display: flex;
   align-items: center;
+  gap: 15px;
+  color: lightgray;
 }
 
-.forlan > p {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 5px;
-}
-
-.dum {
-  width: 13px;
-  height: 13px;
-  background: yellow;
-  border-radius: 50%;
-}
-
-.nal {
-  width: 13px;
-  height: 13px;
-  background: purple;
-  border-radius: 50%;
-}
-
-.pinnedCard-btnGroup {
+.pochin-btn {
   width: 100%;
+  gap: 20px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -139,22 +67,37 @@
   width: 5%;
 }
 
+.private {
+  border: 1px solid gray;
+  background: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: lightgray;
+}
+
+.home-cart-text {
+  margin: 0;
+}
+
 @media (max-width: 1270px) {
-  .birinchi {
-    width: 100%;
+  .wrapper {
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
   }
-  .manba {
+  .profil {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .home-box {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  #card {
-    width: 150px;
+  .cart {
+    width: 100%;
     height: 100px;
-  }
-  .wrapper {
-    display: block;
   }
   .mt-2 {
     margin-top: 50px !important;
@@ -162,37 +105,34 @@
     flex-direction: column;
     align-items: center;
   }
-  .avatar {
+  .prof-image {
     width: 200px;
     height: 200px;
   }
-  .foravatar {
+  .prof-imagebox {
     justify-content: flex-start;
-    width: auto;
-  }
-  .ikkinchi {
+    padding: 20px 0px 20px 30px;
     width: 100%;
   }
-  .ikkinchi .manba {
-    display: block;
+  .wrapper {
+    width: 100%;
   }
   .card {
     width: 90% !important;
     height: auto !important;
     margin: 0 auto;
   }
-  .pinnedCard-btnGroup {
-    gap: 30px;
-  }
-  .aboutcoder {
-    text-align: center;
-  }
-  #des {
+  .desc {
     width: auto;
   }
-  #fir {
+  .mx-3 {
     align-items: flex-start !important;
     margin: 20px !important;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    width: 90%;
   }
 }
 @media (max-width: 560px) {

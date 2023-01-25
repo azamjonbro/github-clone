@@ -1,6 +1,6 @@
 main{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 @media (max-width:1020px){
@@ -15,4 +15,11 @@ main{
 }
 body{
     font-family: 'Poppins'sans-serif;
+    background: #0d1117;;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
 }

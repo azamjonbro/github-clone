@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./style.scss";
 import Plus from '../Images/plus.png';
 const index = () => {  
@@ -17,6 +17,13 @@ const index = () => {
       resCon.appendChild(input)
       navItem.forEach(item => resCon.appendChild(item))
    }
+   const [image, setimage]=useState([])
+
+   useEffect(()=>{
+      fetch("https://api.github.com/users/azamjonabdullayev").then((data)=>data.json()).then((res)=>{
+         setimage(res)
+      })
+   },[])
    return (
       <>
          <header>
@@ -59,16 +66,8 @@ const index = () => {
 
 
             <div className="dropdown">
-               <img
-                  src='https://cdn-icons-png.flaticon.com/512/3247/3247251.png'
-                  className="rounded-circle"
-                  height="25"
-                  id='notif'
-                  alt="Black and White Portrait of a Man"
-                  loading="lazy"
-               />
+            <i class="fa-solid fa-bell"></i>
                <a
-                  className="dropdown-toggle d-flex align-items-center hidden-arrow"
                   href="#"
                   id="navbarDropdownMenuAvatar"
                   role="button"
@@ -93,7 +92,7 @@ const index = () => {
                   aria-expanded="false"
                >
                   <img
-                     src="https://avatars.githubusercontent.com/u/110798985?v=4"
+                     src={image.avatar_url}
                      className="rounded-circle"
                      id='profile'
                   />

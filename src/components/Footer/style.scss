@@ -2,7 +2,7 @@ img{
     width: 35px;
     height: 35px;
 }
-#ulirems{
+.nav-item{
     width: 65%;
     display: flex;
     justify-content: space-around;
@@ -10,7 +10,7 @@ img{
     flex-wrap: wrap;
 
 }
-#ulirems>li{
+.nav-item>li{
     font-size: 14px;
     color: rgb(0, 153, 255);
 }
@@ -36,7 +36,7 @@ img{
         flex-direction: column-reverse;
     }
     
-    #brandcha>img{
+    .footer-cont>img{
         margin-top: -25px;
     }
     #ulirems{
