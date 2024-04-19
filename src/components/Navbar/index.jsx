@@ -20,7 +20,7 @@ const index = () => {
    const [image, setimage]=useState([])
 
    useEffect(()=>{
-      fetch("https://api.github.com/users/azamjonabdullayev").then((data)=>data.json()).then((res)=>{
+      fetch("https://api.github.com/users/azamjonbro").then((data)=>data.json()).then((res)=>{
          setimage(res)
       })
    },[])
