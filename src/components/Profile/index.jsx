@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function index() {
   const [profil, setProfil] = useState([]);
   useEffect(() => {
-    fetch("https://api.github.com/users/azamjonabdullayev")
+    fetch("https://api.github.com/users/azamjonbro")
       .then((data) => data.json())
       .then((result) => {
         setProfil(result);
